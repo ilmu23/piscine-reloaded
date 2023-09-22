@@ -6,7 +6,7 @@
 /*   By: ivalimak <ivalimak@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 18:02:14 by ivalimak          #+#    #+#             */
-/*   Updated: 2023/09/22 18:09:12 by ivalimak         ###   ########.fr       */
+/*   Updated: 2023/09/22 18:22:04 by ivalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,6 @@ void	ft_print_numbers(void)
 		ft_putchar(c++);
 }
 /*
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	main(void)
 {
 	ft_print_numbers();

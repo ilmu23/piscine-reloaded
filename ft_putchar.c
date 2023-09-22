@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivalimak <ivalimak@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 17:34:44 by ivalimak          #+#    #+#             */
-/*   Updated: 2023/09/22 18:21:39 by ivalimak         ###   ########.fr       */
+/*   Created: 2023/09/22 18:15:13 by ivalimak          #+#    #+#             */
+/*   Updated: 2023/09/22 18:15:44 by ivalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	char	c;
-
-	c = 'a';
-	while (c < 'a' + 26)
-		ft_putchar(c++);
+	write(1, &c, 1);
 }
-/*
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}*/
