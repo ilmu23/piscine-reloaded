@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivalimak <ivalimak@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/22 17:34:44 by ivalimak          #+#    #+#             */
-/*   Updated: 2023/09/22 18:10:24 by ivalimak         ###   ########.fr       */
+/*   Created: 2023/09/22 18:02:14 by ivalimak          #+#    #+#             */
+/*   Updated: 2023/09/22 18:09:12 by ivalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char	c;
 
-	c = 'a';
-	while (c < 'a' + 26)
+	c = '0';
+	while (c < '0' + 10)
 		ft_putchar(c++);
 }
 /*
@@ -30,6 +30,6 @@ void	ft_putchar(char c)
 
 int	main(void)
 {
-	ft_print_alphabet();
+	ft_print_numbers();
 	return (0);
 }*/
