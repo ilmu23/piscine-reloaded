@@ -6,7 +6,7 @@
 /*   By: ivalimak <ivalimak@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:55:01 by ivalimak          #+#    #+#             */
-/*   Updated: 2023/09/23 16:06:48 by ivalimak         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:12:01 by ivalimak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,52 @@ int	ft_count_if(char **tab, int (*f)(char*))
 	return (out);
 }
 /*
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_strlen(char *s)
+int	isupcase(char *s)
 {
-	int	i;
+	while (*s)
+	{
+		if(isupper(*s) == 0 && isdigit(*s) == 0)
+			break ;
+		else
+			s++;
+	}
+	if (*s)
+		return (0);
+	return (1);
+}
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+int	islowcase(char *s)
+{
+	while (*s)
+	{
+		if(islower(*s) == 0 && isdigit(*s) == 0)
+			break ;
+		else
+			s++;
+	}
+	if (*s)
+		return (0);
+	return (1);
 }
 
 int	main(int argc, char **argv)
 {
-	char	**tab;
+	int		f;
 
-	if (argc == 1)
+	if (argc < 3)
 		return (1);
-	tab = malloc(argc * sizeof(char *));
-	tab[argc - 1] = NULL;
-	while (argc-- > 0)
-		tab[argc - 1] = argv[argc];
-	printf("%d\n", ft_count_if(tab, ft_strlen));
+	argv++;
+	f = atoi(*argv);
+	argv++;
+	if (f == 1)
+		printf("%d\n", ft_count_if(argv, isupcase));
+	else if (f == 2)
+		printf("%d\n", ft_count_if(argv, islowcase));
+	else
+		printf("Unknown option for function (1 = isupcase, 2 = islowcase\n");
 	return (0);
 }*/
